@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        JavaScript--Assessment--3--Create new list item and add to DOM
+    </title>
+
+
+    <style>
+
+        
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .sec-1 {
+            background-color: darkgrey;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .contioner {
+            width: 1250px;
+            margin: 0 auto;
+        }
+         .diteil{
+             /* background-color: rgb(206, 182, 121); */
+             width: 80%;
+             margin: 0 auto;
+             padding: 50px 0;
+         }
+        .input {
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+        }
+
+        .input {
+            justify-content: center;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .input input{
+            padding: 5px;
+        }
+
+        label {
+            width: 18%;
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        .list {
+            display: flex;
+            width: 80%;
+            justify-content: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .btn {
+            text-align: center;
+           
+        }
+        .btn input{
+            padding: 5px;
+            width: 37%;
+            background-color: blue;
+            border: none;
+            font-size: 18px;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="sec-1">
+
+        <div class="contioner ">
+            
+
+          <div class="diteil">
+            <div class="input">
+                <label for="text">Enter your name</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="input">
+                <label for="text">Enter your Surname</label>
+                <input type="text" id="surname">
+            </div>
+
+            <div class="input">
+                <label for="text">Enter your father name</label>
+                <input type="text" id="father">
+            </div>
+
+
+            <div class="list ">
+                <ol>
+                    <li id="a"></li>
+                    <li id="b"></li>
+                    <li id="c"></li>
+                </ol>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Submit" onclick="addName()" />
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+
+
+    <script>
+        let abc = [];
+        let def = [];
+        let ghi = [];
+
+        function addName() {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            abc.push(name);
+            document.getElementById("a").innerHTML = abc;
+
+            let father = document.getElementById("father").value;
+            def.push(father);
+            document.getElementById("b").innerHTML = def;
+
+            let surname = document.getElementById("surname").value;
+            ghi.push(surname);
+            document.getElementById("c").innerHTML = ghi;
+        }
+    </script>
+</body>
+
+</html>
